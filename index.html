@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R. Rajalakshmi | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background: #0e0e0e;
+        color: #fff;
+      }
+      header {
+        padding: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: linear-gradient(135deg, #1f1f1f, #0e0e0e);
+      }
+      .intro {
+        max-width: 700px;
+        text-align: right;
+      }
+      .intro h1 {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+      .intro p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        color: #aaa;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 2rem;
+        border: 2px solid #00e0ff;
+      }
+      nav {
+        background: #121212;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav a {
+        color: #f2f2f2;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #00e0ff;
+      }
+      section {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: auto;
+      }
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        border-left: 5px solid #00e0ff;
+        padding-left: 1rem;
+      }
+      .skills-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .skills-column {
+        flex: 1;
+        min-width: 200px;
+      }
+      .skills-column h3 {
+        margin-bottom: 0.5rem;
+        color: #00e0ff;
+      }
+      .skills-columns {
+        display: flex;
+        flex-wrap: wrap; /* allows wrapping on smaller screens */
+        gap: 2rem;
+        justify-content: space-between;
+      }
+
+      @media (min-width: 992px) {
+        .skills-columns {
+          flex-wrap: nowrap; /* prevents wrapping on larger screens */
+        }
+        .skills-column {
+          flex: 1;
+          min-width: 180px;
+        }
+      }
+
+      .skills-column ul {
+        list-style: none;
+      }
+      .skills-column li {
+        background: #1a1a1a;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+      }
+      .project {
+        background: #1c1c1c;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid #00e0ff;
+      }
+      .experience-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+      }
+
+      .experience-box {
+        background: #1c1c1c;
+        padding: 1.2rem;
+        border-left: 4px solid #00e0ff;
+        border-radius: 10px;
+        flex: 1 1 calc(25% - 1rem); /* 4 per row with spacing */
+        min-width: 200px;
+        box-sizing: border-box;
+      }
+
+      .project a {
+        display: inline-block;
+        margin-top: 1rem;
+        background: #00e0ff;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .experience li,
+      .achievement li {
+        background: #1c1c1c;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #00e0ff;
+        border-radius: 10px;
+        list-style: none;
+      }
+      footer {
+        background: #121212;
+        text-align: center;
+        padding: 2rem;
+        color: #aaa;
+        margin-top: 4rem;
+      }
+      a {
+        color: #00e0ff;
+        text-decoration: none;
+      }
+      .contact p {
+        margin-bottom: 0.7rem;
+      }
+
+      /* New Academic Section Styling */
+      #academics ul {
+        list-style-type: none;
+      }
+
+      #academics li {
+        background: #1c1c1c;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #00e0ff;
+        border-radius: 10px;
+      }
+
+      #academics h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        border-left: 5px solid #00e0ff;
+        padding-left: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column-reverse;
+          text-align: center;
+        }
+        .intro {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .skills-columns {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-aos="fade-down">
+      <div class="intro">
+        <h1>Rajalakshmi R</h1>
+        <p>
+          Software Developer | CSE Student | AAA COLLEGE OF ENGINEERING &
+          TECHNOLOGY
+        </p>
+      </div>
+      <img
+        src="C:\Users\rajal\OneDrive\Pictures\WhatsApp Image 2025-04-11 at 22.36.17_d25f4cfb.jpg"
+        alt="Profile"
+        class="profile-pic"
+      />
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Internship & Training</a>
+      <a href="#academics">Academics</a>
+      <!-- New Link -->
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+           I'm R. Rajalakshmi, a passionate and driven 3rd-year Computer Science Engineering student at AAA College.
+          I thrive on building solutions that make a difference — whether it's a full-stack web app or a smart wellness platform. 💻✨
+          <br><br>
+          Currently sharpening my skills through internships at EY GDS, Vault of Codes, and Apex Planet, and actively growing through Infosys Springboard Cohort 3. I’m always eager to explore new tech, take on challenges, and collaborate with like-minded people.
+          <br><br>
+          <strong>Turning coffee into code and ideas into reality </strong> — that's the vibe I bring to every project!
+        </p>
+      </section>
+      
+
+    <!-- New Academic Details Section -->
+    <section id="academics" data-aos="fade-up">
+      <h2>Academic Details</h2>
+      <ul>
+        <li>
+          <strong>B.E (Computer Science and Engineering)</strong><br />AAA
+          COLLEGE OF ENGINEERING & TECHNOLOGY , Sivakasi , 2022-2026 <br />CGPA :
+          8.88 (Upto 5th semester)
+        </li>
+        <li>
+          <strong
+            >Higher Secondary Education(XII Mathamatics Computer
+            Science)</strong
+          ><br />S.H.N.V.MATRIC.HIGHER.SECONDARY SCHOOL , Sivakasi , 2021 - 2022<br />
+          Cutoff : 174.5
+        </li>
+        <li>
+          <strong>SSLC (X)</strong><br />S.H.N.V.MATRIC.HIGHER.SECONDARY SCHOOL ,
+          2019 - 2020<br />
+          Percentage :77%
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-columns">
+        <div class="skills-column">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Flask</li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h3>Database</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Postman</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Crowdfunding Platform</h3>
+        <p>
+          MERN stack platform supporting verified fundraising campaigns for
+          medical, education, and emergency causes with admin approval.
+        </p>
+        <a href="https://crowd-rise.vercel.app/">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Student Performance Tracker</h3>
+        <p>
+          Python + Flask app to track and analyze student academic data, with
+          web UI and database integration.
+        </p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <h3>TO-DO list</h3>
+        <p>
+            A simple web application to manage tasks, built with HTML, CSS, and
+            JavaScript.
+        </p>
+        <a href="https://github.com/RAJALAKSHMI66/todo_list">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Health & Wellness App</h3>
+        <p>
+          App that recommends diet plans, tracks steps, sleep, hydration, and
+          predicts health risks with AI support.
+        </p>
+        <a href="https://github.com/RAJALAKSHMI66/Health-wellness"
+          >View Project</a
+        >
+      </div>
+    </section>
+
+    <section id="experience" data-aos="fade-up">
+      <h2>Internship & Training</h2>
+      <div class="experience-grid">
+        <div class="experience-box">
+          <strong>Apex Planet (Online Internship)</strong> – Intern (Apr 2025 –
+          Present)<br /><br />
+          Working as a web developer, currently creating responsive designs.
+        </div>
+        <div class="experience-box">
+          <strong>Vault of Codes (Online Internship)</strong> – Intern (Mar 2025
+          – Apr 2025)<br /><br />
+          Worked as a Python intern and developed a Contact Book app.
+        </div>
+        <div class="experience-box">
+          <strong>EY GDS (Online Internship)</strong> – Intern (Feb 2025 – Mar
+          2025)<br /><br />
+          Built a crowdfunding application during my internship.
+        </div>
+        <div class="experience-box">
+          <strong
+            >Training Program (Hybrid mode)<br /><br />Infosys
+            Springboard</strong
+          >
+          – Cohort 3 Participant (2024 – Present)<br /><br />
+          Participated in training programs focusing on professional and
+          technical skills.
+        </div>
+        <div class="experience-box">
+          <strong>Itech Academy (Offine Internship)</strong> – Intern (July 2024
+          – Aug 2024)<br /><br />
+          Built a crowdfunding application during my internship.
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="achievement" data-aos="fade-up">
+        <h2>Achievements 🏆</h2>
+        <ul>
+          <li>Winner of the Paper Presentation Competition at the National Level Symposium, Sri Vidya College of Engineering and Technology</li>
+          <li>Class Topper in the 4th and 5th Semester Anna University Examinations</li>
+          <li>Successfully completed the ICT Learnathon 2024</li>
+          <li>Winner of the Paper Presentation Competition at Kamaraj College of Engineering and Technology</li>
+        </ul>
+      </section>
+      <section id="achievements" class="achievement" data-aos="fade-up">
+        <h2>Certifications </h2>
+        <ul>
+          <li>Digital Skills of User Experience- Accenture </li>
+          <li>Power BI - Forage </li>          
+          <li>Cloud Computing - Nptel </li>
+          <li>Foundation of PYthon Certification -Infosys Springboard with a score of 70/100</li>
+          <li>Programming in Java - Nptel </li>
+          <li>Foundation of PYthon Certification -Infosys Springboard with a score of 80/100</li>
+          <li>Completed Microsoft Azure AZ-900 Certification with a score of 880/1000</li>
+        </ul>
+      </section>
+      
+
+    <section id="contact" class="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          ✉️ Email:
+          <a href="mailto:rajalakshmiraveendran33@gmail.com">
+            rajalakshmiraveendran33@gmail.com
+          </a>
+        </p>
+        <p>
+          🛠️ GitHub:
+          <a href="https://github.com/RAJALAKSHMI66/">
+            github.com/RAJALAKSHMI66
+          </a>
+        </p>
+        <p>
+          💼 LinkedIn:
+          <a href="https://www.linkedin.com/in/rajalakshmi-r-694974277">
+            linkedin.com/in/rajalakshmi-r-694974277
+          </a>
+        </p>
+        <p>
+          📞 Phone:
+          <a href="tel:+918148934821">
+            +91 81489 34821
+          </a>
+        </p>
+      </section>
+      
+
+    <footer>
+      <p>&copy; 2025 R. Rajalakshmi. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
